@@ -62,4 +62,61 @@
 	return newFrame;
 }
 
++ (CGRect)frame:(CGRect)frame withIncOrigin:(CGPoint)increment
+{
+	CGRect	newFrame = frame;
+	
+	newFrame.origin.x += increment.x;
+	newFrame.origin.y += increment.y;
+	
+	return newFrame;	
+}
+
++ (CGRect)frame:(CGRect)frame withIncSize:(CGSize)increment
+{
+	CGRect	newFrame = frame;
+	
+	newFrame.size.width += increment.width;
+	newFrame.size.width += increment.height;
+	
+	return newFrame;	
+}
+
++ (CGRect)frame:(CGRect)frame withIncX:(CGFloat)increment
+{
+	CGRect	newFrame = frame;
+	
+	newFrame.origin.x += increment;
+	
+	return newFrame;	
+}
+
++ (CGRect)frame:(CGRect)frame withIncY:(CGFloat)increment
+{
+	CGRect	newFrame = frame;
+	
+	newFrame.origin.y += increment;
+	
+	return newFrame;	
+}
+
++ (CGRect)frame:(CGRect)frame withIncWidth:(CGFloat)increment
+{
+	CGRect	newFrame = frame;
+	
+	newFrame.size.width += increment;
+	
+	return newFrame;	
+}
+
++ (CGRect)frame:(CGRect)frame withIncHeight:(CGFloat)increment
+{
+	CGRect	newFrame = frame;
+	
+	newFrame.size.height += increment;
+	
+	return newFrame;	
+}
+
+
 @end
