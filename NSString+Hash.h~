@@ -1,0 +1,16 @@
+//
+//  NSString+Hash.h
+//  StreamitIPhone
+//
+//  Created by Thomas Joulin on 4/27/10.
+//  Copyright 2010 Streamit. All rights reserved.
+//
+
+# import <Foundation/Foundation.h>
+# import <CommonCrypto/CommonDigest.h>
+
+@interface NSString (HashExtensions)
+
+- (NSString *)sha1Value;
+
+@end
