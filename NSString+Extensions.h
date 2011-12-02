@@ -16,6 +16,7 @@
 
 // Convert Strings
 + (NSString *)stringFromBool:(BOOL)boolean;
++ (NSString *)stringWithData:(NSData *)data;
 
 // Compare Strings
 - (BOOL)equals:(NSString *)s;
@@ -32,5 +33,8 @@
 
 // URL strings
 - (NSString *)urlEncode;
+
+// Hash strings
+- (NSString *)sha1Value;
 
 @end

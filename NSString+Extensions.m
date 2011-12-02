@@ -134,5 +134,22 @@
 	return [encodedString autorelease];
 }
 
++ (NSString *)stringWithData:(NSData *)data
+{
+    NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    return [s autorelease];
+}
+
+- (NSString *)sha1Value
+{
+	const void		*bytes;
+	unsigned char hashBytes[CC_SHA1_DIGEST_LENGTH];
+    
+	bytes = [[self dataUsingEncoding:NSASCIIStringEncoding] bytes];
+	CC_SHA1(bytes, [self length], hashBytes);
+    
+	return [[NSData dataWithBytes:hashBytes length:CC_SHA1_DIGEST_LENGTH] hexadecimalString];
+}
 
 @end
