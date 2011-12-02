@@ -18,9 +18,6 @@
 + (NSString *)stringFromBool:(BOOL)boolean;
 + (NSString *)stringWithData:(NSData *)data;
 
-// Compare Strings
-- (BOOL)equals:(NSString *)s;
-
 // Work with date strings
 - (NSString *)formattedStringUsingFormat:(NSString *)dateFormat;
 - (NSDate *)dateValueWithFormat:(NSString *)format;

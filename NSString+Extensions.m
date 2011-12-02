@@ -28,11 +28,6 @@
     return [emailTest evaluateWithObject:self];
 }
 
-- (BOOL)equals:(NSString *)s
-{
-    return [self compare:s] == NSOrderedSame;
-}
-
 + (NSString *)stringFromBool:(BOOL)boolean
 {
     return boolean == TRUE ? @"TRUE" : @"FALSE";
