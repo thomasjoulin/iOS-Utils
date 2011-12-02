@@ -1,12 +1,12 @@
 //
-//  NSString+Utils.m
+//  NSString+Extensions.m
 //
 //  Created by Thomas Joulin on 10/17/11.
 //
 
-#import "NSString+Utils.h"
+#import "NSString+Extensions.h"
 
-@implementation NSString (UtilsAdditions)
+@implementation NSString (Extensions)
 
 - (BOOL)isNeitherNullNorEmpty
 {

@@ -1,12 +1,12 @@
 //
-//  NSString+Utils.h
+//  NSString+Extensions.h
 //
 //  Created by Thomas Joulin on 10/17/11.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (UtilsAdditions)
+@interface NSString (Extensions)
 
 // Test Strings
 - (BOOL)isValidEmail;
