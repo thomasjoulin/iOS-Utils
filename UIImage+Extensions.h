@@ -15,4 +15,21 @@
 + (UIImage *)imageFromView:(UIView *)view scaledToSize:(CGSize)newSize;
 + (UIImage *)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
 
+/*
+ UIImage+ProportionalFill
+ (c) Matt Gemmell
+ http://mattgemmell.com/2010/07/05/mgimageutilities/
+ */
+typedef enum
+{
+    MGImageResizeCrop,	// analogous to UIViewContentModeScaleAspectFill, i.e. "best fit" with no space around.
+    MGImageResizeCropStart,
+    MGImageResizeCropEnd,
+    MGImageResizeScale	// analogous to UIViewContentModeScaleAspectFit, i.e. scale down to fit, leaving space around if necessary.
+} MGImageResizingMethod;
+
+- (UIImage *)imageToFitSize:(CGSize)size method:(MGImageResizingMethod)resizeMethod;
+- (UIImage *)imageCroppedToFitSize:(CGSize)size; // uses MGImageResizeCrop
+- (UIImage *)imageScaledToFitSize:(CGSize)size; // uses MGImageResizeScale
+
 @end
